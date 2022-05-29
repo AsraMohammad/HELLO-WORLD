@@ -1,0 +1,33 @@
+// C program to print binary right angle
+// triangle.
+#include <stdio.h>
+
+// function to print binary right angle
+// triangle
+void binaryRightAngleTriangle(int n) {
+
+	// declare row and column
+	int row, col;
+	
+	for (row = 0; row < n; row++)
+	{
+		for (col = 0;col <= row; col++)
+		{
+			if (((row + col) % 2) == 0)
+				printf("0");
+			else
+				printf("1");
+			printf("\t");
+		}
+		printf("\n");
+	}
+}
+
+// driver code
+int main(void)
+{
+	// no. of rows to be printed
+	int n = 4;
+	binaryRightAngleTriangle(n);
+	return 0;
+}
